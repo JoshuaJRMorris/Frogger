@@ -1,0 +1,244 @@
+{"frames": [
+
+{
+	"filename": "car1.png",
+	"frame": {"x":1,"y":1,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "car2.png",
+	"frame": {"x":43,"y":1,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "car3.png",
+	"frame": {"x":85,"y":1,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "death 1.png",
+	"frame": {"x":127,"y":1,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "death 2.png",
+	"frame": {"x":169,"y":1,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "death 3.png",
+	"frame": {"x":211,"y":1,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "gator-0.png",
+	"frame": {"x":203,"y":169,"w":102,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":102,"h":40},
+	"sourceSize": {"w":102,"h":40}
+},
+{
+	"filename": "gator-1.png",
+	"frame": {"x":1,"y":211,"w":102,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":102,"h":40},
+	"sourceSize": {"w":102,"h":40}
+},
+{
+	"filename": "jumpDown 1.png",
+	"frame": {"x":253,"y":1,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "jumpDown 2.png",
+	"frame": {"x":1,"y":43,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "jumpLeft 1.png",
+	"frame": {"x":43,"y":43,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "jumpLeft 2.png",
+	"frame": {"x":85,"y":43,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "jumpRight 1.png",
+	"frame": {"x":127,"y":43,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "jumpRight 2.png",
+	"frame": {"x":169,"y":43,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "jumpUp 1.png",
+	"frame": {"x":211,"y":43,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "jumpUp 2.png",
+	"frame": {"x":253,"y":43,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "small fly.png",
+	"frame": {"x":1,"y":85,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "small frog.png",
+	"frame": {"x":43,"y":85,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "small gator-1.png",
+	"frame": {"x":85,"y":85,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "tractor.png",
+	"frame": {"x":127,"y":85,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "tree1.png",
+	"frame": {"x":135,"y":127,"w":95,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":95,"h":40},
+	"sourceSize": {"w":95,"h":40}
+},
+{
+	"filename": "tree2.png",
+	"frame": {"x":105,"y":211,"w":196,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":196,"h":40},
+	"sourceSize": {"w":196,"h":40}
+},
+{
+	"filename": "truck.png",
+	"frame": {"x":169,"y":85,"w":60,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":35},
+	"sourceSize": {"w":60,"h":35}
+},
+{
+	"filename": "turtle2 0.png",
+	"frame": {"x":231,"y":85,"w":65,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":40},
+	"sourceSize": {"w":65,"h":40}
+},
+{
+	"filename": "turtle2 1.png",
+	"frame": {"x":1,"y":127,"w":65,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":40},
+	"sourceSize": {"w":65,"h":40}
+},
+{
+	"filename": "turtle2 2.png",
+	"frame": {"x":68,"y":127,"w":65,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":40},
+	"sourceSize": {"w":65,"h":40}
+},
+{
+	"filename": "turtle3 0.png",
+	"frame": {"x":232,"y":127,"w":99,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":99,"h":40},
+	"sourceSize": {"w":99,"h":40}
+},
+{
+	"filename": "turtle3 1.png",
+	"frame": {"x":1,"y":169,"w":99,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":99,"h":40},
+	"sourceSize": {"w":99,"h":40}
+},
+{
+	"filename": "turtle3 2.png",
+	"frame": {"x":102,"y":169,"w":99,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":99,"h":40},
+	"sourceSize": {"w":99,"h":40}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "frog.png",
+	"format": "RGBA8888",
+	"size": {"w":332,"h":252},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:42c1ec1f48298dc18481238fb1eedb4a:c0156ee3b704c316d250d1bc33d0da98:8dde0dd0197344c2f9f9f01d8d204375$"
+}
+}

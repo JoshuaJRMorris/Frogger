@@ -48,11 +48,12 @@ private:
 	bool								matchesCategories(SceneNode::Pair& colliders, Category::Type type1, Category::Type type2);
 
 	void								buildScene();
-	void								addEnemies();
-	void								addEnemy(Actor::Type type, float relX, float relY);
-	void								spawnEnemies();
+	void								addNPCs();
+	void								addNPC(Actor::Type type, float relX, float relY);
+	void								spawnNPCs();
 	void								updateEnemies();
 	void								destroyEntitiesOutsideView();
+	void addWinSprite();
 	//void								guideMissiles();
 
 	float								getCarRandomSpawn();
@@ -93,8 +94,9 @@ private:
 	sf::Vector2f						mSpawnPosition;
 	float								mScrollSpeed;
 	Actor*								playerActor;
+	int									winFrogs;
 
-	std::vector<SpawnPoint>				mEnemySpawnPoints;
+	std::vector<SpawnPoint>				npcSpawnPoints;
 
 	BloomEffect							mBloomEffect;
 };

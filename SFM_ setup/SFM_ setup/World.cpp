@@ -70,12 +70,26 @@ void World::update(sf::Time dt)
 	adaptPlayerVelocity();
 	handleCollisions();
 
-	spawnEnemies();
+	spawnNPCs();
 
 	mSceneGraph.update(dt, mCommandQueue);
 	adaptPlayerPosition();
 
 	updateSounds();
+
+	if (playerActor->getPosition().y < 120) {
+		if(!playerActor->isOnWater()){
+			addWinSprite();
+			playerActor->setState(Actor::State::KingMe);
+			if (winFrogs == 5) {
+				//win the game
+			}
+		}
+
+		
+
+	}
+	
 }
 
 void World::draw()
@@ -157,6 +171,8 @@ void World::handleCollisions()
 	{
 		playerActor->setState(Actor::State::Dead);
 	}
+
+	
 }
 
 bool World::matchesCategories(SceneNode::Pair& colliders, Category::Type type1, Category::Type type2)
@@ -255,7 +271,7 @@ void World::buildScene()
 	backgroundSprite->setPosition(mWorldBounds.left, mWorldBounds.top - viewHeight);
 	mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
 	
-	addEnemies();
+	addNPCs();
 
 	// Add player's frogger
 	std::unique_ptr<Actor> player(new Actor(Actor::Type::Hero, mTextures, mFonts));
@@ -264,24 +280,34 @@ void World::buildScene()
 	mSceneLayers[UpperAir]->attachChild(std::move(player));
 }
 
-void World::addEnemies()
+void World::addNPCs()
 {
-	addEnemy(Actor::Type::Car1, getCarRandomSpawn(), 540.f);
-	addEnemy(Actor::Type::Tractor, getCarRandomSpawn(), 500.f);
-	addEnemy(Actor::Type::Car2, getCarRandomSpawn(), 460.f);
-	addEnemy(Actor::Type::Truck, getCarRandomSpawn(), 420.f);
-	addEnemy(Actor::Type::Car3, getCarRandomSpawn(), 380.f);
+	addNPC(Actor::Type::Car1, getCarRandomSpawn(), 540.f);
+	addNPC(Actor::Type::Tractor, getCarRandomSpawn(), 500.f);
+	addNPC(Actor::Type::Car2, getCarRandomSpawn(), 460.f);
+	addNPC(Actor::Type::Truck, getCarRandomSpawn(), 420.f);
+	addNPC(Actor::Type::Car3, getCarRandomSpawn(), 380.f);
+
+	/*addNPC(Actor::Type::FrogWin, 35.f, 98.f);
+	addNPC(Actor::Type::FrogWin, 139.f, 98.f);
+	addNPC(Actor::Type::FrogWin, 241.f, 98.f);
+	addNPC(Actor::Type::FrogWin, 342.f, 98.f);
+	addNPC(Actor::Type::FrogWin, 444.f, 98.f);*/
+
+	
+
+	
 	float spawn = 300;
 	for (int i{0}; i < 5; ++i)
 	{
 		int random = oneOrTwo(rEng);
 		if (random == 1) 
 		{
-			addEnemy(Actor::Type::Tree1, 0.f, spawn);
+			addNPC(Actor::Type::Tree1, 0.f, spawn);
 		}
 		else
 		{
-			addEnemy(Actor::Type::Tree2, 0.f, spawn);
+			addNPC(Actor::Type::Tree2, 0.f, spawn);
 		}
 		spawn -= 40;
 	}
@@ -289,28 +315,28 @@ void World::addEnemies()
 
 
 	// Sort all enemies according to their y value, such that lower enemies are checked first for spawning
-	std::sort(mEnemySpawnPoints.begin(), mEnemySpawnPoints.end(), [](SpawnPoint lhs, SpawnPoint rhs)
+	std::sort(npcSpawnPoints.begin(), npcSpawnPoints.end(), [](SpawnPoint lhs, SpawnPoint rhs)
 		{
 			return lhs.y < rhs.y;
 		});
 		
 }
 
-void World::addEnemy(Actor::Type type, float relX, float relY)
+void World::addNPC(Actor::Type type, float relX, float relY)
 {
 	SpawnPoint spawn(type, + relX, relY);
-	mEnemySpawnPoints.push_back(spawn);
+	npcSpawnPoints.push_back(spawn);
 }
 
 
-void World::spawnEnemies()
+void World::spawnNPCs()
 {
 	
 	// Spawn all enemies entering the view area (including distance) this frame
-	while (!mEnemySpawnPoints.empty()
-		&& mEnemySpawnPoints.back().y > getBattlefieldBounds().top)
+	while (!npcSpawnPoints.empty()
+		&& npcSpawnPoints.back().y > getBattlefieldBounds().top)
 	{
-		SpawnPoint spawn = mEnemySpawnPoints.back();
+		SpawnPoint spawn = npcSpawnPoints.back();
 
 		std::unique_ptr<Actor> enemy(new Actor(spawn.type, mTextures, mFonts));
 		enemy->setPosition(spawn.x, spawn.y);
@@ -328,7 +354,7 @@ void World::spawnEnemies()
 		mSceneLayers[LowerAir]->attachChild(std::move(enemy));
 
 		// Enemy is spawned, remove from the list to spawn
-		mEnemySpawnPoints.pop_back();
+		npcSpawnPoints.pop_back();
 	}
 	
 }
@@ -347,6 +373,13 @@ void World::destroyEntitiesOutsideView()
 
 	mCommandQueue.push(command);
 	*/
+}
+void World::addWinSprite()
+{
+	if (playerActor->isFinishBlock()) {
+		addNPC(Actor::Type::FrogWin, playerActor->getPosition().x, playerActor->getPosition().y);
+	}
+	winFrogs++;
 }
 float World::getCarRandomSpawn()
 {

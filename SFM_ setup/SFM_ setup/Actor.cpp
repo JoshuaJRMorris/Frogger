@@ -80,6 +80,8 @@ unsigned int Actor::getCategory() const
 	case Type::Tree1:
 	case Type::Tree2:
 		return Category::Tree;
+	case Type::FrogWin:
+		return Category::SceneSprite;
 		
 	}
 }
@@ -210,7 +212,7 @@ void Actor::updateStates()
 {
 	if (isDestroyed())
 		state_ = Actor::State::Dead;
-	if (state_ == Actor::State::Dead && animations_[state_].isFinished())
+	if (state_ == Actor::State::Dead && animations_[state_].isFinished() || state_ == Actor::State::KingMe)
 	{
 		state_ = Actor::State::Idle;
 		this->setPosition(240.f, 600.f);
@@ -257,7 +259,19 @@ void Actor::checkOnWater()
 
 void Actor::checkForFinished()
 {
-
+	if (this->getPosition().x > 17 && this->getPosition().x < 54   ||
+		this->getPosition().x > 119 && this->getPosition().x < 157 ||
+		this->getPosition().x > 222 && this->getPosition().x < 258 ||
+		this->getPosition().x > 323 && this->getPosition().x < 361 ||
+		this->getPosition().x > 426 && this->getPosition().x < 463 ) {
+		finishBlock = true;
+		
+	}
+	else {
+		finishBlock = false;
+		//he's not on water, but this will kill him and he needs to die in this situation
+		onWater = true;
+	}
 }
 
 void Actor::updateCurrent(sf::Time dt, CommandQueue& commands)
@@ -289,6 +303,7 @@ void Actor::updateCurrent(sf::Time dt, CommandQueue& commands)
 		//rec = flipCar(rec);
 
 	checkOnWater();
+	
 	sprite_.setTextureRect(rec);
 	centerOrigin(sprite_);
 	if (state_ != State::Dead)

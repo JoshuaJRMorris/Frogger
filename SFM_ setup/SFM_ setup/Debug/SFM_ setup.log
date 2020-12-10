@@ -1,5 +1,12 @@
 ﻿  Actor.cpp
 C:\Users\jash1\OneDrive\Documents\GitHub\Year2\frogger-j-j\Frogger\SFM_ setup\SFM_ setup\Actor.cpp(29,16): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
-C:\Users\jash1\OneDrive\Documents\GitHub\Year2\frogger-j-j\Frogger\SFM_ setup\SFM_ setup\Actor.cpp(85): warning C4715: 'Actor::getCategory': not all control paths return a value
-C:\Users\jash1\OneDrive\Documents\GitHub\Year2\frogger-j-j\Frogger\SFM_ setup\SFM_ setup\Actor.cpp(176): warning C4715: 'Actor::flipCar': not all control paths return a value
+  Application.cpp
+  DataTables.cpp
+  GameState.cpp
+  ParticleNode.cpp
+  Player.cpp
+  World.cpp
+  Generating Code...
+C:\Users\jash1\OneDrive\Documents\GitHub\Year2\frogger-j-j\Frogger\SFM_ setup\SFM_ setup\Actor.cpp(87): warning C4715: 'Actor::getCategory': not all control paths return a value
+C:\Users\jash1\OneDrive\Documents\GitHub\Year2\frogger-j-j\Frogger\SFM_ setup\SFM_ setup\Actor.cpp(178): warning C4715: 'Actor::flipCar': not all control paths return a value
   SFM_ setup.vcxproj -> C:\Users\jash1\OneDrive\Documents\GitHub\Year2\frogger-j-j\Frogger\SFM_ setup\Debug\SFM_ setup.exe

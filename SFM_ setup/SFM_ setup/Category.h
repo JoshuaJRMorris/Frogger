@@ -20,6 +20,7 @@ namespace Category
 
 		Car = 1 << 10,
 		Tree = 1 << 11,
+		SceneSprite = 1,
 
 		Actor = Car | Tree
 		//Aircraft = PlayerAircraft | AlliedAircraft | EnemyAircraft,

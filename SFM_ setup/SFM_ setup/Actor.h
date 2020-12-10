@@ -12,7 +12,7 @@ public:
        Hero, Car1, Car2, Car3, Tractor, Truck, Tree1, Tree2, FrogWin
     };
     enum class State {
-        Dead, Idle, JumpUp, JumpDown, JumpLeft, JumpRight
+        Dead, Idle, JumpUp, JumpDown, JumpLeft, JumpRight, KingMe
     };
     enum class Direction
     {
